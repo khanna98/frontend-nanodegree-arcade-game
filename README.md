@@ -1,6 +1,13 @@
-frontend-nanodegree-arcade-game
-===============================
+# Arcade Game
+> A simple arcade game using javaScript.
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+This is an implementation of Frogger game where user has to go through a lane avoiding the beetles.
+They score a point once they cross the lane without getting hit.
+With increasing score, the number of beetles increases.
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+# Using / Playing
+
+* Visit http://mayankkhanna.me/frontend-nanodegree-arcade-game/ OR open `index.html` in browser (after cloning).
+* After that, use the arrow keys to move the character.
+* Your goal is to make him reach the water side (on the top) without getting hit from any of the beetles.
+When the player reaches the water side, he starts again from the default position but with the score incremented.
