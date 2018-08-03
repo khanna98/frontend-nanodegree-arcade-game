@@ -29,7 +29,7 @@ Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
-// checks en enemy's collision with player
+// Check Collision
 Enemy.prototype.checkCollision = function() {
     if (player.y + 131 >= this.y + 90 &&
         player.y + 73 <= this.y + 135 &&
@@ -53,13 +53,13 @@ var Player = function(x, y, speed) {
 // Update method for Player
 Player.prototype.update = function() {};
 
-// renders the player
+// Renders the player
 Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
 /*
- * handles input for the player
+ * Input by the player
  */
 Player.prototype.handleInput = function(key) {
     if (key == 'left') {
@@ -120,12 +120,13 @@ document.addEventListener('keyup', function(e) {
     player.handleInput(allowedKeys[e.keyCode]);
 });
 
-// custom
-// increase enemies by score
+/*
+* Increment the number of enemies on increase of score
+*/
 var score = 0;
 
 /*
- * resets the game in case of collision
+ * Reset game after Collision
  */
 function gameReset() {
     player.reset();
@@ -139,7 +140,7 @@ function gameReset() {
 }
 
 /*
- * game over successfully (reached water)
+ * Game Over (River Reached)
  */
 function gameOver() {
     player.reset();
@@ -151,7 +152,7 @@ function gameOver() {
 }
 
 /*
- * updates the on screen score display
+ * Update/ Increment Score
  */
 function updateDisplay() {
     scoreDiv.innerHTML = 'Score ' + score;
